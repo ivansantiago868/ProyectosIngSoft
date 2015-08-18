@@ -41,7 +41,7 @@ public class Tablero {
         if(this.x==t.x && this.y==t.y)
             return true;
         return false;
-        //prueba
+        //prueba  sasasas
     }
     
     
