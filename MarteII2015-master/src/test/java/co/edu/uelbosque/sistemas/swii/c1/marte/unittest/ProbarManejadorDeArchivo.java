@@ -46,9 +46,11 @@ public class ProbarManejadorDeArchivo {
     @Test
     public void lasCordenadasDePosicionSonCorectas() throws IOException 
     {
-        Coordenada supesperada=new Coordenada(7,6);
-        CoordenadaPosicion cor = new CoordenadaPosicion(supesperada,"I");
+        Coordenada supesperada=new Coordenada(1,2);
+        CoordenadaPosicion cor = new CoordenadaPosicion(supesperada,"N");
         ManejadorArchivo manejador=new ManejadorArchivo();
+        manejador.setRutaArchivo("src/main/resources/reglas.txt");
+        Coordenada sup=manejador.getCoordenadaInicial();
         CoordenadaPosicion corEsperada =  manejador.getCordenadaPosicion();
         Assert.assertEquals(cor,corEsperada); 
     }

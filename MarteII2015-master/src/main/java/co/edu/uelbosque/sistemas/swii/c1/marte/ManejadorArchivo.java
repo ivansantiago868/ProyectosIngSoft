@@ -52,9 +52,8 @@ public class ManejadorArchivo {
     }
 
     public CoordenadaPosicion getCordenadaPosicion() throws IOException {
-        if(primeraLinea==null)
+        if(siguienteLinea==null)
             getSiguienteLinea();
-        getSiguienteLinea();
         String coor[]=this.siguienteLinea.split(" ");
         int x=Integer.parseInt(coor[0]);
         int y=Integer.parseInt(coor[1]);

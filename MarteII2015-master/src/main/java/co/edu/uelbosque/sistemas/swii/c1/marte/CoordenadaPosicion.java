@@ -19,11 +19,15 @@ public class CoordenadaPosicion {
     }
     @Override
     public boolean equals(Object obj) {
+        boolean retorno = false;
         if(obj == null) return false;
         if(!(obj instanceof CoordenadaPosicion)) return false;
-        CoordenadaPosicion tmp=(CoordenadaPosicion)obj;
-        return (tmp.tf.x == this.tf.x && tmp.tf.y == this.tf.y && this.i ==  tmp.i);
+        CoordenadaPosicion tmp=(CoordenadaPosicion)obj;        
+        if (tmp.tf.x==this.tf.x && tmp.tf.y == this.tf.y )
+        {
+            if(tmp.tf.y == this.tf.y)
+                retorno = true;
+        }
+        return retorno;
     }
-    
-    
 }
