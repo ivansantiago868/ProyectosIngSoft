@@ -53,6 +53,7 @@ public class ProbarManejadorDeArchivo {
         Coordenada sup=manejador.getCoordenadaInicial();
         CoordenadaPosicion corEsperada =  manejador.getCordenadaPosicion();
         Assert.assertEquals(cor,corEsperada); 
+        //prueba commit
     }
     
     
