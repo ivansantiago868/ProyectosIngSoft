@@ -7,43 +7,24 @@ package co.edu.uelbosque.sistemas.swii.c1.marte;
 
 /**
  *
- * @author Alejandro
+ * @author KIVANDY-PC
  */
 public class Tablero {
-
-    private int x;
-    private int y;
-
-    public Tablero(){
-        
+    
+    Coordenada cord;
+    public void setEnviarCoordenadasTamañoTablero(Coordenada sup) {
+        this.cord = sup;
     }
-    public Tablero(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    void setX(int x) {
-        this.x = x;
-
-    }
-
-    void setY(int y) {
-        this.y = y;
-
-    }
-
     @Override
     public boolean equals(Object obj) {
-        if(this==obj) return true;
-        if(!(obj instanceof Tablero))
-            return false;
-        Tablero t=(Tablero)obj;
-        if(this.x==t.x && this.y==t.y)
-            return true;
-        return false;
-        //prueba  sasasas
+        boolean retorno = false;
+        if(obj == null) return false;
+        if(!(obj instanceof Tablero)) return false;
+        Tablero tmp=(Tablero)obj;        
+        if (tmp.cord.x==this.cord.x && tmp.cord.y == this.cord.y )
+        {
+                retorno = true;
+        }
+        return retorno;
     }
-    
-    
-
 }

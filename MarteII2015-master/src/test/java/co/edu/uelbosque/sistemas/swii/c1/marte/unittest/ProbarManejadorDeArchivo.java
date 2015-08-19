@@ -8,7 +8,6 @@ package co.edu.uelbosque.sistemas.swii.c1.marte.unittest;
 import co.edu.uelbosque.sistemas.swii.c1.marte.CoordenadaPosicion;
 import co.edu.uelbosque.sistemas.swii.c1.marte.Coordenada;
 import co.edu.uelbosque.sistemas.swii.c1.marte.ManejadorArchivo;
-import co.edu.uelbosque.sistemas.swii.c1.marte.Tablero;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import org.testng.Assert;
