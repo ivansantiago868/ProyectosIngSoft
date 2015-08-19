@@ -5,6 +5,8 @@
  */
 package co.edu.uelbosque.sistemas.swii.c1.marte;
 
+import java.io.FileNotFoundException;
+
 /**
  *
  * @author KIVANDY-PC
@@ -26,5 +28,10 @@ public class Tablero {
                 retorno = true;
         }
         return retorno;
+    }
+
+    public void GetConfirmarDatosCOrrectos(Tablero tt) throws FileNotFoundException {
+        if(tt == null)throw new FileNotFoundException("El Dato Es Nulo");
+        if(!tt.cord.x.isNumeric)throw new FileNotFoundException("El Dato No es Numerico");
     }
 }

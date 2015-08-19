@@ -7,8 +7,25 @@ package co.edu.uelbosque.sistemas.swii.c1.marte;
 
 /**
  *
- * @author clave_f212
+ * @author KIVANDY-PC
  */
 public class Robot {
+    CoordenadaPosicion CorPos;
+    public void SetEnviarCordenadasRobot(CoordenadaPosicion corEsperada) {
+        this.CorPos = corEsperada;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        boolean retorno = false;
+        if(obj == null) return false;
+        if(!(obj instanceof CoordenadaPosicion)) return false;
+        CoordenadaPosicion tmp=(CoordenadaPosicion)obj;        
+        if (tmp.tf.x==this.CorPos.tf.x && tmp.tf.y == this.CorPos.tf.y)
+        {
+            if(tmp.i.compareTo(this.CorPos.i) == 0)
+                retorno = true;
+        }
+        return retorno;
+    }
     
 }
