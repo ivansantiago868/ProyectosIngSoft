@@ -45,7 +45,7 @@ public class ProbarTablero {
         Coordenada sup=manejador.getCoordenadaInicial();
         Tablero tt = new Tablero();
         tt.setEnviarCoordenadasTamañoTablero(sup);
-        tt.GetConfirmarDatosCOrrectos(tt);
+        //tt.GetConfirmarDatosCOrrectos(tt);
         
     }
 }

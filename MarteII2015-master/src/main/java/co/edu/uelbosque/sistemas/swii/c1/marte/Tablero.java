@@ -30,8 +30,8 @@ public class Tablero {
         return retorno;
     }
 
-    public void GetConfirmarDatosCOrrectos(Tablero tt) throws FileNotFoundException {
-        if(tt == null)throw new FileNotFoundException("El Dato Es Nulo");
-        if(!tt.cord.x.isNumeric)throw new FileNotFoundException("El Dato No es Numerico");
-    }
+    //public void GetConfirmarDatosCOrrectos(Tablero tt) throws FileNotFoundException {
+    //    if(tt == null)throw new FileNotFoundException("El Dato Es Nulo");
+    //    if(!tt.cord.x.isNumeric)throw new FileNotFoundException("El Dato No es Numerico");
+    //}
 }
