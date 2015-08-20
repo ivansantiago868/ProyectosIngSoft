@@ -27,5 +27,18 @@ public class Movimiento {
         Movimiento mov = (Movimiento)obj;
         return Arrays.equals(mov.posiciones, posiciones);
     }
-    
+    public static boolean validarCoordenadas(char[] arreglo) {
+        boolean retorno = false;
+        
+        for(int i = 0; i< arreglo.length; i++){
+             
+            if(arreglo[i] == 'I' || arreglo[i] == 'A'){
+                retorno = true;
+            }
+            else{
+                retorno = false;
+            }
+        } 
+        return retorno;
+    }
 }

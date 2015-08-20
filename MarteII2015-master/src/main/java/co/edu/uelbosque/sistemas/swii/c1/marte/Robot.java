@@ -20,11 +20,11 @@ public class Robot {
     public boolean equals(Object obj) {
         boolean retorno = false;
         if(obj == null) return false;
-        if(!(obj instanceof CoordenadaPosicion)) return false;
-        CoordenadaPosicion tmp=(CoordenadaPosicion)obj;        
-        if (tmp.tf.x==this.CorPos.tf.x && tmp.tf.y == this.CorPos.tf.y)
+        if(!(obj instanceof Robot)) return false;
+        Robot tmp=(Robot)obj;        
+        if (tmp.CorPos.tf.x==this.CorPos.tf.x && tmp.CorPos.tf.y == this.CorPos.tf.y)
         {
-            if(tmp.i.compareTo(this.CorPos.i) == 0)
+            if(tmp.CorPos.i.compareTo(this.CorPos.i) == 0)
                 retorno = true;
         }
         return retorno;

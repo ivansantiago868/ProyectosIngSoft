@@ -97,6 +97,6 @@ public class ManejadorArchivo {
         char mov []= siguienteLinea.toCharArray();
         Movimiento m = new Movimiento(mov);
         return m;
-    }   
+    }  
   
 }

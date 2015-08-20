@@ -24,8 +24,12 @@ public class PruebaRobot {
     @Test
     public void traerCoordenadaPosicionRobot() throws FileNotFoundException, IOException
     {
+        char[] arreglo = {'I','A','I','A','I','A','I','A','I','A','I', 'A'};
+        Movimiento mov = new Movimiento(arreglo);
         Coordenada cordenadaInventado=new Coordenada(1,2);
         CoordenadaPosicion cordenadaPosInventado = new CoordenadaPosicion(cordenadaInventado,"N");
+        Robot robotInventado = new Robot();
+        robotInventado.SetEnviarCordenadasRobot(cordenadaPosInventado, mov);
         ManejadorArchivo manejador=new ManejadorArchivo();
         manejador.setRutaArchivo("src/main/resources/reglas.txt");
         Coordenada sup=manejador.getCoordenadaInicial();
@@ -33,6 +37,6 @@ public class PruebaRobot {
         Movimiento movEsperado = manejador.GetMovimiento();
         Robot rob = new Robot();
         rob.SetEnviarCordenadasRobot(corEsperada,movEsperado);
-        Assert.assertEquals(cordenadaPosInventado,rob); 
+        Assert.assertEquals(robotInventado,rob); 
     }
 }
