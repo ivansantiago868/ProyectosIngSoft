@@ -5,6 +5,7 @@
  */
 package co.edu.uelbosque.sistemas.swii.c1.marte.unittest;
 
+import co.edu.uelbosque.sistemas.swii.c1.marte.Movimiento;
 import co.edu.uelbosque.sistemas.swii.c1.marte.CoordenadaPosicion;
 import co.edu.uelbosque.sistemas.swii.c1.marte.Coordenada;
 import co.edu.uelbosque.sistemas.swii.c1.marte.ManejadorArchivo;
@@ -53,6 +54,16 @@ public class ProbarManejadorDeArchivo {
         CoordenadaPosicion corEsperada =  manejador.getCordenadaPosicion();
         Assert.assertEquals(cor,corEsperada); 
         //prueba commit
+    }
+    @Test
+    public void existenMasExploradores() throws FileNotFoundException, IOException{
+        char[] arreglo = {'I','A','I','A','I','A','I','A','I','A','I', 'A'};
+        Movimiento mov = new Movimiento(arreglo);
+        ManejadorArchivo manager = new ManejadorArchivo();
+        manager.setRutaArchivo("src/main/resources/reglas.txt");
+        Coordenada sup=manager.getCoordenadaInicial();
+        CoordenadaPosicion corEsperada =  manager.getCordenadaPosicion();
+        Movimiento movEsperado = manager.GetMovimiento();   
     }
     
     

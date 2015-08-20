@@ -62,8 +62,14 @@ public class ManejadorArchivo {
         CoordenadaPosicion hh = new CoordenadaPosicion(gg, z);
         return hh;
     }
-
-
     
+    public Movimiento GetMovimiento() throws IOException {
+        //if(siguienteLinea == null)
+            getSiguienteLinea();
+        //char mov[] = {'I','A','I','A','I','A','I','A','I','A','I','A'};
+        char mov []= siguienteLinea.toCharArray();
+        Movimiento m = new Movimiento(mov);
+        return m;
+    }   
   
 }
