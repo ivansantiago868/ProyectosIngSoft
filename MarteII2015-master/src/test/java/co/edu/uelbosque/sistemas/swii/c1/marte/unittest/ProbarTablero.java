@@ -34,18 +34,4 @@ public class ProbarTablero {
         tt.setEnviarCoordenadasTamañoTablero(sup);
         Assert.assertEquals(tableroCreado,tt); 
     }
-    @Test
-    public void verificarTableroCoordenadas() throws IOException
-    {
-        Coordenada supesperada=new Coordenada(7,6);
-        Tablero tableroCreado = new Tablero();
-        tableroCreado.setEnviarCoordenadasTamañoTablero(supesperada);
-        ManejadorArchivo manejador=new ManejadorArchivo();
-        manejador.setRutaArchivo("src/main/resources/reglas.txt");
-        Coordenada sup=manejador.getCoordenadaInicial();
-        Tablero tt = new Tablero();
-        tt.setEnviarCoordenadasTamañoTablero(sup);
-        //tt.GetConfirmarDatosCOrrectos(tt);
-        
-    }
 }

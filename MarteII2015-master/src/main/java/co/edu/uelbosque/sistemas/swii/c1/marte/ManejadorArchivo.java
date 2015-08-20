@@ -42,15 +42,29 @@ public class ManejadorArchivo {
     }
 
     public Coordenada getCoordenadaInicial() throws IOException {
+        int x,y;
         if(primeraLinea==null)
             getPrimeraLinea();
         String coor[]=this.primeraLinea.split(" ");
-        int x=Integer.parseInt(coor[0]);
-        int y=Integer.parseInt(coor[1]);
-
+        if(isNumeric(coor[0]) && isNumeric(coor[1]))
+        {
+            x=Integer.parseInt(coor[0]);
+            y=Integer.parseInt(coor[1]);
+        }
+        else
+        {
+            throw new FileNotFoundException("Las Coordenadas No Son Correctas");
+        }
         return new Coordenada(x,y);
     }
-
+    private static boolean isNumeric(String cadena){
+	try {
+		Integer.parseInt(cadena);
+		return true;
+	} catch (NumberFormatException nfe){
+		return false;
+	}
+    }
     public CoordenadaPosicion getCordenadaPosicion() throws IOException {
         if(siguienteLinea==null)
             getSiguienteLinea();

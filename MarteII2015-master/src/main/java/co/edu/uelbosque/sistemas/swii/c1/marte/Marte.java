@@ -15,11 +15,12 @@ import java.io.IOException;
 public class Marte {
     public static void main(String[] args) throws FileNotFoundException, IOException
     {
-        Coordenada hh;
-        CoordenadaPosicion kk;
-        ManejadorArchivo ttt = new ManejadorArchivo();
-        ttt.setRutaArchivo("src/main/resources/reglas.txt");
-        hh=ttt.getCoordenadaInicial();
-        kk=ttt.getCordenadaPosicion();
+        ManejadorArchivo manager = new ManejadorArchivo();
+        manager.setRutaArchivo("src/main/resources/reglas.txt");
+        Coordenada sup=manager.getCoordenadaInicial();
+        CoordenadaPosicion corEsperada =  manager.getCordenadaPosicion();
+        Movimiento movEsperado = manager.GetMovimiento();
+        CoordenadaPosicion corEsperada1 =  manager.getCordenadaPosicion();
+        Movimiento movEsperado1 = manager.GetMovimiento();
     }
 }
