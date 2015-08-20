@@ -66,12 +66,28 @@ public class ManejadorArchivo {
 	}
     }
     public CoordenadaPosicion getCordenadaPosicion() throws IOException {
+        int x,y;
+        String z;
         if(siguienteLinea==null)
             getSiguienteLinea();
         String coor[]=this.siguienteLinea.split(" ");
-        int x=Integer.parseInt(coor[0]);
-        int y=Integer.parseInt(coor[1]);
-        String z=coor[2];
+        if(isNumeric(coor[0]) && isNumeric(coor[1]))
+        {
+            if(coor[2].compareTo("N")== 0 ||coor[2].compareTo("S")== 0 ||coor[2].compareTo("E")== 0 ||coor[2].compareTo("O")== 0 )
+            {
+                x=Integer.parseInt(coor[0]);
+                y=Integer.parseInt(coor[1]);
+                z=coor[2];
+            }
+            else
+            {
+                throw new FileNotFoundException("Las Coordenadas No Son Correctas");
+            }
+        }
+        else
+        {
+            throw new FileNotFoundException("Las Coordenadas No Son Correctas");
+        }
         Coordenada gg = new Coordenada(x,y);
         CoordenadaPosicion hh = new CoordenadaPosicion(gg, z);
         return hh;
