@@ -15,6 +15,9 @@ import java.io.IOException;
 public class Marte {
     public static void main(String[] args) throws FileNotFoundException, IOException
     {
+        Tablero tt = new Tablero();
+        Robot rob = new Robot();
+        Robot rob1 = new Robot();
         ManejadorArchivo manager = new ManejadorArchivo();
         manager.setRutaArchivo("src/main/resources/reglas.txt");
         Coordenada sup=manager.getCoordenadaInicial();
@@ -22,5 +25,8 @@ public class Marte {
         Movimiento movEsperado = manager.GetMovimiento();
         CoordenadaPosicion corEsperada1 =  manager.getCordenadaPosicion();
         Movimiento movEsperado1 = manager.GetMovimiento();
+        tt.setEnviarCoordenadasTamañoTablero(sup);
+        rob.SetEnviarCordenadasRobot(corEsperada,movEsperado);
+        rob1.SetEnviarCordenadasRobot(corEsperada1,movEsperado1);
     }
 }

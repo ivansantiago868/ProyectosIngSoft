@@ -68,8 +68,7 @@ public class ManejadorArchivo {
     public CoordenadaPosicion getCordenadaPosicion() throws IOException {
         int x,y;
         String z;
-        if(siguienteLinea==null)
-            getSiguienteLinea();
+        getSiguienteLinea();
         String coor[]=this.siguienteLinea.split(" ");
         if(isNumeric(coor[0]) && isNumeric(coor[1]))
         {

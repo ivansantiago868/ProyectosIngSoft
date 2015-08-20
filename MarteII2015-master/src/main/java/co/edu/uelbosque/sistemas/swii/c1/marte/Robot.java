@@ -11,8 +11,10 @@ package co.edu.uelbosque.sistemas.swii.c1.marte;
  */
 public class Robot {
     CoordenadaPosicion CorPos;
-    public void SetEnviarCordenadasRobot(CoordenadaPosicion corEsperada) {
+    Movimiento Mov;
+    public void SetEnviarCordenadasRobot(CoordenadaPosicion corEsperada,Movimiento mov) {
         this.CorPos = corEsperada;
+        this.Mov = mov;
     }
     @Override
     public boolean equals(Object obj) {
