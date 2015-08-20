@@ -64,9 +64,7 @@ public class ManejadorArchivo {
     }
     
     public Movimiento GetMovimiento() throws IOException {
-        //if(siguienteLinea == null)
-            getSiguienteLinea();
-        //char mov[] = {'I','A','I','A','I','A','I','A','I','A','I','A'};
+        getSiguienteLinea();
         char mov []= siguienteLinea.toCharArray();
         Movimiento m = new Movimiento(mov);
         return m;

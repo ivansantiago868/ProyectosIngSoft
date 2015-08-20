@@ -56,6 +56,18 @@ public class ProbarManejadorDeArchivo {
         //prueba commit
     }
     @Test
+    public void lasCoordenadasDeMovimientiSonCorrectas() throws FileNotFoundException, IOException{
+        char[] arreglo = {'I','A','I','A','I','A','I','A','I','A','I', 'A'};
+        Movimiento mov = new Movimiento(arreglo);
+        ManejadorArchivo manager = new ManejadorArchivo();
+        manager.setRutaArchivo("src/main/resources/reglas.txt");
+        Coordenada sup=manager.getCoordenadaInicial();
+        CoordenadaPosicion corEsperada =  manager.getCordenadaPosicion();
+        Movimiento movEsperado = manager.GetMovimiento();
+        Assert.assertEquals(mov, movEsperado);
+    }
+    
+    @Test
     public void existenMasExploradores() throws FileNotFoundException, IOException{
         char[] arreglo = {'I','A','I','A','I','A','I','A','I','A','I', 'A'};
         Movimiento mov = new Movimiento(arreglo);
@@ -63,7 +75,7 @@ public class ProbarManejadorDeArchivo {
         manager.setRutaArchivo("src/main/resources/reglas.txt");
         Coordenada sup=manager.getCoordenadaInicial();
         CoordenadaPosicion corEsperada =  manager.getCordenadaPosicion();
-        Movimiento movEsperado = manager.GetMovimiento();   
+        //Movimiento movEsperado = manager.GetMovimiento();   
     }
     
     
