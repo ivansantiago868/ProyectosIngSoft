@@ -5,6 +5,8 @@
  */
 package co.edu.uelbosque.sistemas.swii.c1.marte;
 
+import java.util.Arrays;
+
 /**
  *
  * @author KIVANDY-PC
@@ -25,7 +27,10 @@ public class Robot {
         if (tmp.CorPos.tf.x==this.CorPos.tf.x && tmp.CorPos.tf.y == this.CorPos.tf.y)
         {
             if(tmp.CorPos.i.compareTo(this.CorPos.i) == 0)
-                retorno = true;
+            {
+                if(Arrays.equals(tmp.Mov.posiciones,this.Mov.posiciones))
+                    retorno = true;
+            }
         }
         return retorno;
     }
